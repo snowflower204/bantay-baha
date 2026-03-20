@@ -2,6 +2,7 @@ package bantaybaha;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
 import java.util.Date;
 import java.util.List;
 
@@ -24,8 +25,12 @@ public class SensorController {
     }
 
     @GetMapping("/status")
-    public SensorReading getLatestStatus() {
+    public ResponseEntity<SensorReading> getLatestStatus() {
         List<SensorReading> readings = repository.findAll();
-        return readings.isEmpty() ? null : readings.get(readings.size() - 1);
+        if (readings.isEmpty()) {
+            return ResponseEntity.noContent().build(); // 204 No Content instead of 500
+        }
+        return ResponseEntity.ok(readings.get(readings.size() - 1));
     }
+
 }

@@ -1,0 +1,24 @@
+{
+  "name": "bantay-baha",
+  "version": "1.0.0",
+  "description": "Bantay Baha is a real-time, multi-channel flood early-warning system for bridges. It integrates water-level sensors, SMS alerts, LED boards, and floating markers to detect rising floodwaters and relay location-specific risks. SMS ensures reliable delivery, while visual cues guide drivers to reroute safely and avoid danger.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowflower204/bantay-baha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/snowflower204/bantay-baha/issues"
+  },
+  "homepage": "https://github.com/snowflower204/bantay-baha#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
